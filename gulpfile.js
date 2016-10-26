@@ -45,6 +45,8 @@ gulp.task('cleaver', function(){
     .pipe(shell([
       'cleaver src/index.md'
     ]));
+    gulp.src('./index.html')
+    .pipe(gulp.dist('./dist'));
 });
 
 gulp.task('watch', ['server'], function() {
