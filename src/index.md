@@ -1,13 +1,11 @@
 title: Gulp Como Herramienta para Front-End Devs
 author:
-  name: Miguel Palau
-  twitter: mpalau
-  url: http://miguel.click
+  name: Miguel Palau & Hugo Aguirre
 output: index.html
 style: style.css
 
 --
-# ![Gulp el logo oficial](img/gulp.svg)
+# Angular 2 y Ionic 33333
 
 --
 ### ¿Qué es Gulp?

@@ -45,24 +45,27 @@ gulp.task('cleaver', function(){
     .pipe(shell([
       'cleaver src/index.md'
     ]));
-    gulp.src('./index.html')
-    .pipe(gulp.dist('./dist'));
 });
+
+gulp.task('copy:cleaver', function () {
+  return gulp.src('./index.html')
+  .pipe(gulp.dest('./dist'))
+})
 
 gulp.task('watch', ['server'], function() {
   gulp.watch('./src/*.sass', ['sass:cleaver']);
   gulp.watch('./src/index.md', ['cleaver']);
   gulp.watch('./src/img/**', ['assets']);
+  gulp.watch('./index.html', ['copy:cleaver'])
 });
 
 gulp.task('server', function(){
   return gulp.src('./dist')
     .pipe(webserver({
-      livereload : true,
-      open : true
+      livereload : true
     }))
 });
 
 gulp.task('default', function(){
-  runSequence('clean', 'sass', 'assets', 'cleaver', 'watch');
+  runSequence('clean', 'sass', 'assets', 'cleaver', 'copy:cleaver', 'watch');
 });
