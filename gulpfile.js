@@ -41,7 +41,7 @@ gulp.task('sass:cleaver', function(){
 });
 
 gulp.task('cleaver', function(){
-  return gulp.src('./src/bem.md')
+  return gulp.src('./src/index.md')
     .pipe(shell([
       'cleaver src/index.md'
     ]));
