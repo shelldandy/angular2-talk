@@ -1,0 +1,35 @@
+{
+  "name": "devtalks-gulp",
+  "version": "1.0.0",
+  "description": "mi presentación para devnights beta",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cleaver gulp.md && open index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mike3run/gulp-talk.git"
+  },
+  "keywords": [
+    "gulp",
+    "nodejs"
+  ],
+  "author": "@mpalau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mike3run/gulp-talk/issues"
+  },
+  "homepage": "https://github.com/mike3run/gulp-talk#readme",
+  "devDependencies": {
+    "cleaver": "^0.8.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-shell": "^0.5.2",
+    "gulp-webserver": "^0.9.1",
+    "run-sequence": "^1.1.5"
+  }
+}
